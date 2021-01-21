@@ -2,7 +2,14 @@
   <div>
     <form>
       <p>Nom:</p>
-      <input @keyup="verifNom" v-model="nom" />
+      <v-text-field
+        v-model="nom"
+        @keyup="verifNom"
+        :rules="nameRules"
+        :counter="10"
+        label="First name"
+        required
+      ></v-text-field>
       <p :class="classNom" v-if="validNom == false">{{ messageErreur }}</p>
       <p>Sujet</p>
       <input @keyup="verifSujet" v-model="sujet" />

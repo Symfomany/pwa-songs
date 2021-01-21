@@ -1,3 +1,11 @@
 <template>
-  <h3>Je suis Boyer Julien</h3>
+  <h3>Mon nom est Julien {{ nom }}</h3>
 </template>
+
+<script>
+export default {
+  props: {
+    nom: String,
+  },
+};
+</script>
